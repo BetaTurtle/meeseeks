@@ -8,5 +8,5 @@ def entry(bot, update):
     # print("\n")
     if update.message:
         if not update.message.reply_to_message:
-            print("DELETING...")
+            logging.info("DELETING...")
             bot.delete_message(chat_id=update.message.chat.id, message_id=update.message.message_id)
